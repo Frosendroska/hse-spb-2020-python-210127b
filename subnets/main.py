@@ -1,6 +1,21 @@
+
+
+
+
 def solve(instr):
-    pass
-    
+    # answer = ''
+    dic_of_answers = {}
+    string = instr.split('\n')  # лист строчек
+    for s in string[2:-2]:  # s - строчка
+        part_of_string = s.split('|')  # лист из двух частей
+        key = part_of_string[2]
+        key = key.replace(' ', '')
+        if key not in dic_of_answers:
+            dic_of_answers.update({key: []})  # словарь с ключем в виде ip
+
+    return ', '.join(dic_of_answers.keys())
+    # if string.find("Решение"):
+
 
 """
 196.42.36.56 - Решение №1
